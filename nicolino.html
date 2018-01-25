@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<title>Nicolino</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand" rel="stylesheet">
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Quicksand", "Lato", sans-serif;}
+    body, html {
+        height: 100%;
+        color: #ffffff;
+        line-height: 1.8;
+    }
+    body {
+        
+        
+        background: #3366cc; /* Standard syntax (must be last) */
+        background-repeat: no-repeat;
+        
+    }
+</style>
+</head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-home"></i> INICIO</a> 
+            <a href="https://docs.google.com/spreadsheets/d/1N7A1hI9bXqDsCM50xTCqtMJO05pQA8uMNQkYNForB3Q/edit?usp=sharing" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> PEDIDOS</a>
+            <a href="https://docs.google.com/spreadsheets/d/1jeijHAybaKzeXo5uJO3KqmdnlvoZdr8q6WMWGwYch_o/edit?usp=sharing" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> BALANCE</a>
+            <!--
+            <a href="#" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> PARALLAX</a>
+            -->
+        </div>
+        
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="https://docs.google.com/spreadsheets/d/1N7A1hI9bXqDsCM50xTCqtMJO05pQA8uMNQkYNForB3Q/edit?usp=sharing" class="w3-bar-item w3-button" onclick="toggleFunction()">PEDIDOS
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1jeijHAybaKzeXo5uJO3KqmdnlvoZdr8q6WMWGwYch_o/edit?usp=sharing" class="w3-bar-item w3-button" onclick="toggleFunction()">BALANCE</a>
+            <!--
+            <a href="https://juan-80.github.io/website/parallax.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PARALLAX</a>
+            -->
+        </div>
+    </div>
+
+  
+    <div class="w3-display-middle">
+            <h1 class="w3-jumbo w3-animate-top"><img src="https://cdn.pixabay.com/photo/2017/10/14/13/47/box-2850602_1280.png" alt="" width="198" height="323" /></h1>
+            <br>
+            <hr class="w3-border-grey" style="margin:auto;width:80%">
+            <p class="w3-large w3-center">N I C O L I N O</p>
+          </div>
+
+
+
+    <!-- SCRIPT -->
+    <script>
+
+        // Change style of navbar on scroll
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            var navbar = document.getElementById("myNavbar");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            } else {
+                navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+            }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
